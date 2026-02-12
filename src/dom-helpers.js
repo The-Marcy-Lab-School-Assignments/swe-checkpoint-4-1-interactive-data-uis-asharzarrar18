@@ -27,5 +27,13 @@ export const renderProducts = (products) => {
 
 
 export const renderProductDetails = (product) => {
+    const details = document.querySelector('#product-details')
+    details.classList.remove('hidden')
 
+    document.querySelector('#product-title').textContent = product.title
+    document.querySelector('#product-thumbnail').src = product.thumbnail
+    document.querySelector('#product-thumbnail').alt = product.title
+    document.querySelector('#product-price').textContent = product.price
+    document.querySelector('#product-description').textContent = product.description
+    document.querySelector('#product-rating').textContent = product.rating
 };
